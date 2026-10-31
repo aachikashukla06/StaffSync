@@ -1,17 +1,13 @@
 const express = require('express');
 const payrollController = require('../controllers/payrollController');
-const protected = require('../middleware/authMiddleware');
+const protect = require('../middleware/authMiddleware');
 const verifyRole = require('../middleware/roleMiddleware');
 
 const router = express.Router();
 
-// Admin can create payroll
-router.post('/create', protected, verifyRole(['admin', 'hr']), payrollController.createPayroll);
-
-// Admin can see one employee's history
-router.get('/employee/:id', protected, verifyRole(['admin', 'hr']), payrollController.getEmployeePayrollHistory);
-
-// Employee can see their own history
-router.get('/my', protected, payrollController.getEmployeePayrollHistory);
+router.post('/create', protect, verifyRole(['admin', 'hr']), payrollController.createPayroll);
+router.get('/my', protect, verifyRole(['employee']), payrollController.getEmployeePayrollHistory);
+router.get('/employee/:id', protect, verifyRole(['admin', 'hr']), payrollController.getEmployeePayrollHistory);
+router.get('/', protect, verifyRole(['admin', 'hr']), payrollController.getAllPayroll);
 
 module.exports = router;

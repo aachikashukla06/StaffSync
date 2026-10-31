@@ -194,3 +194,6 @@ export function TrashIcon(props) {
     </SvgIcon>
   );
 }
+export function MegaphoneIcon(props) {
+  return (<SvgIcon {...props}><path d="M4 10v4h3l9 4V6l-9 4H4Z"/><path d="m7 14 1.5 5h3L10 15"/><path d="M19 9.5a4 4 0 0 1 0 5"/></SvgIcon>);
+}

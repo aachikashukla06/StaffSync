@@ -16,5 +16,7 @@ export function saveUserSession(response, expectedRole) {
 }
 
 export function getLoginError(error) {
-  return error?.response?.data?.message || error.message || 'Unable to login. Please try again.';
+  const message = error?.response?.data?.message || error.message || 'Unable to login. Please try again.';
+  if (message.toLowerCase() === 'user not found') return 'No account matches this ID or email. Ask HR or your administrator to create your account.';
+  return message;
 }

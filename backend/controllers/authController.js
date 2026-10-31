@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
+const Employee = require('../models/Employee');
 const { generateToken } = require('../utils/generateToken');
 const { handleServerError, sendError, sendSuccess } = require('../utils/http');
 const {
@@ -93,6 +94,8 @@ async function createEmployeeAccount(req, res) {
       role: 'employee',
       createdBy: req.userId,
     });
+    const [firstName = '', ...lastNameParts] = (user.name || user.loginId).trim().split(/\s+/);
+    await Employee.create({ User: user._id, firstName, lastName: lastNameParts.join(' '), designation: user.designation || user.profileRole || 'Team Member', Department: req.body.department || undefined, salary: Number(req.body.salary) || undefined });
 
     return sendSuccess(res, {
       statusCode: 201,
