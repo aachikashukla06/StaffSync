@@ -70,12 +70,12 @@ function EmployeeIcon() {
 export const portals = [
   {
     role: 'employee',
-    label: 'EMPLOYEE PORTAL',
-    status: 'User Access',
+    label: 'EMPLOYEE WORKSPACE',
+    status: 'Self service',
     title: 'Employee Login',
     description:
-      'Login using your Employee ID and password to access your profile, leave details, attendance, and salary records.',
-    features: ['Attendance history', 'Leave requests'],
+      'Check attendance, review leave requests, and keep your employee profile up to date.',
+    features: ['Attendance', 'Leave & profile'],
     loginPath: '/employee-login',
     primaryColor: '#3478f0',
     secondaryColor: '#1ca8d5',
@@ -84,12 +84,12 @@ export const portals = [
   },
   {
     role: 'hr',
-    label: 'WORKFORCE MANAGEMENT',
-    status: 'HR Access',
+    label: 'PEOPLE OPERATIONS',
+    status: 'HR team',
     title: 'HR Login',
     description:
-      'Access for HR personnel to manage employees, approve leave requests, track attendance, and handle recruitment.',
-    features: ['Recruitment flow', 'People operations'],
+      'Manage employee profiles, review leave requests, and coordinate day-to-day attendance.',
+    features: ['People directory', 'Leave approvals'],
     loginPath: '/hr-login',
     primaryColor: '#953bef',
     secondaryColor: '#ed3f97',
@@ -98,12 +98,12 @@ export const portals = [
   },
   {
     role: 'admin',
-    label: 'SYSTEM CONTROL',
-    status: 'Full Access',
+    label: 'ADMINISTRATION',
+    status: 'Admin team',
     title: 'Admin Login',
     description:
-      'Full system access for administrators. Manage users, departments, payroll analytics, and system-wide settings.',
-    features: ['Access policies', 'Payroll analytics'],
+      'Manage accounts and departments, oversee payroll records, and maintain workspace access.',
+    features: ['Access control', 'Workforce overview'],
     loginPath: '/admin-login',
     primaryColor: '#5f5cf7',
     secondaryColor: '#8f39ff',

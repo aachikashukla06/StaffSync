@@ -41,9 +41,9 @@ function HRLogin() {
     <div className="admin-login-page">
       <div className="admin-login-card">
         <div className="admin-login-left" style={{ background: 'linear-gradient(135deg, #702ee6, #eb4697)' }}>
-          <div className="admin-logo">HR</div>
-          <h2>HRMS Portal</h2>
-          <p>HR login for employee operations, approvals, and workforce workflows</p>
+          <div className="admin-logo">SS</div>
+          <h2>StaffSync</h2>
+          <p>Your workspace for employee records, attendance, and leave approvals</p>
         </div>
 
         <div className="admin-login-right">

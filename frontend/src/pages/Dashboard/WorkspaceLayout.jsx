@@ -64,7 +64,7 @@ function WorkspaceLayout({
             <BrandIcon />
           </div>
           <div>
-            <strong>HRMS Pro</strong>
+            <strong>StaffSync</strong>
             <span>{brandSubtitle}</span>
           </div>
         </div>

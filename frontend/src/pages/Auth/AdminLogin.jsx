@@ -60,9 +60,9 @@ function AdminLogin() {
     <div className="admin-login-page">
       <div className="admin-login-card">
         <div className="admin-login-left">
-          <div className="admin-logo">HR</div>
-          <h2>HRMS Portal</h2>
-          <p>Admin login for the management dashboard</p>
+          <div className="admin-logo">SS</div>
+          <h2>StaffSync</h2>
+          <p>Admin workspace for people, payroll, and access management</p>
         </div>
 
         <div className="admin-login-right">

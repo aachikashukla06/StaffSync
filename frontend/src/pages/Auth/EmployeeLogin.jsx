@@ -41,9 +41,9 @@ function EmployeeLogin() {
     <div className="admin-login-page">
       <div className="admin-login-card">
         <div className="admin-login-left" style={{ background: 'linear-gradient(135deg, #2c7ef7, #24b2df)' }}>
-          <div className="admin-logo">HR</div>
-          <h2>HRMS Portal</h2>
-          <p>Employee login for attendance, leave records, payroll insights, and personal profile access</p>
+          <div className="admin-logo">SS</div>
+          <h2>StaffSync</h2>
+          <p>Your workspace for attendance, time off, and personal HR details</p>
         </div>
 
         <div className="admin-login-right">
