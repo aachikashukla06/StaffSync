@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { LogoutIcon, MenuIcon } from './dashboardIcons';
 import { clearSession, getDisplayName, getInitials, readSessionUser, SESSION_USER_UPDATED_EVENT } from '../../utils/session';
 import './dashboard.css';
+import './dashboard-polish.css';
 function buildWorkspaceUser(defaultName, getRoleLabel) { const savedUser=readSessionUser(); return {name:getDisplayName(savedUser,defaultName),role:getRoleLabel(savedUser)}; }
 function WorkspaceLayout({navigation,brandIcon:BrandIcon,brandSubtitle,navigationLabel,logoutPath,defaultName,getRoleLabel}) {
  const navigate=useNavigate();const [sidebarOpen,setSidebarOpen]=useState(false);const [profileMenuOpen,setProfileMenuOpen]=useState(false);const [user,setUser]=useState(()=>buildWorkspaceUser(defaultName,getRoleLabel));const initials=useMemo(()=>getInitials(user.name),[user.name]);
